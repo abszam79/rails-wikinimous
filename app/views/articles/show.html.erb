@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h2><%= @article.title %></h2>
+    <div class="details">
+      <p><%= @article.content %></p>
+    </div>
+
+    <%= link_to "Back to list", articles_path %>
+<br />
+    <%= link_to "Edit", edit_article_path %>
+    <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, article_path,
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
